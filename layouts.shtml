@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <!--#include file="layouts/site/head.html"-->
+    </head>
+
+    <body data-spy="scroll" data-target="#navbar-example">
+        <div class="main-body">
+            <!-- Fixed navbar -->
+            <!--#include file="layouts/site/menu.html"-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3" id="navbar-example">
+                        <!--#include file="layouts/site/menu_layout.html"-->
+                    </div>
+                    <div class="col-md-9 scrollspy-example">
+                        <div id="main">
+                            <!--#include file="content/layouts/main.html"-->
+                        </div>
+                        <!--shop-->
+                        <div data-id="shop">
+                            <!--#include file="content/layouts/shop.html"-->
+                            <div id="start_page">
+                                <!--#include file="content/layouts/shop/start_page.html"-->
+                            </div>
+
+                            <div id="catalog">
+                                <!--#include file="content/layouts/shop/catalog.html"-->
+                            </div>
+
+                            <div id="search">
+                                <!--#include file="content/layouts/shop/search.html"-->
+                            </div>
+
+                            <div id="brand">
+                                <!--#include file="content/layouts/shop/brand.html"-->
+                            </div>
+
+                            <div id="sub_categories">
+                                <!--#include file="content/layouts/shop/sub_categories.html"-->
+                            </div>
+
+                            <div id="product">
+                                <!--#include file="content/layouts/shop/product.html"-->
+                            </div>
+
+                            <div id="list_brands">
+                                <!--#include file="content/layouts/shop/list_brands.html"-->
+                            </div>
+
+                            <div id="order">
+                                <!--#include file="content/layouts/shop/order.html"-->
+                            </div>
+
+                            <div id="orderview">
+                                <!--#include file="content/layouts/shop/orderview.html"-->
+                            </div>
+
+                            <div id="compare">
+                                <!--#include file="content/layouts/shop/compare.html"-->
+                            </div>
+
+                            <div id="wishlist">
+                                <!--#include file="content/layouts/shop/wishlist.html"-->
+                            </div>
+
+                            <div id="profile">
+                                <!--#include file="content/layouts/shop/profile.html"-->
+                            </div>
+                        </div>
+
+                        <!--site-->
+                        <div data-id="site">
+                            <!--#include file="content/layouts/site.html"-->
+                            <div id="category">
+                                <!--#include file="content/layouts/site/category.html"-->
+                            </div>
+
+                            <div id="page">
+                                <!--#include file="content/layouts/site/page.html"-->
+                            </div>
+                            <div id="login">
+                                <!--#include file="content/layouts/site/login.html"-->
+                            </div>
+                            <div id="regirster">
+                                <!--#include file="content/layouts/site/regirster.html"-->
+                            </div>
+                            <div id="offline">
+                                <!--#include file="content/layouts/site/offline.html"-->
+                            </div>
+                            <div id="error404">
+                                <!--#include file="content/layouts/site/error404.html"-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- /container -->
+            <!--#include file="layouts/site/footer.html"-->
+        </div>
+    </body>
+</html>

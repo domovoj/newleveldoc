@@ -1,0 +1,213 @@
+<script src="assets/js/jquery.js"></script>
+<script src="dist/js/bootstrap.min.js"></script>
+<script src="highlight.js/highlight.pack.js"></script>
+<script>
+        !function($) {
+
+        "use strict"; // jshint ;_;
+
+
+        /* SCROLLSPY CLASS DEFINITION
+         * ========================== */
+
+        function ScrollSpy(element, options) {
+            var process = $.proxy(this.process, this)
+            , $element = $(element).is('body') ? $(window) : $(element)
+            , href
+            this.options = $.extend({}, $.fn.scrollspy.defaults, options)
+            this.$scrollElement = $element.on('scroll.scroll-spy.data-api', process)
+            this.selector = (this.options.target
+                || ((href = $(element).attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) //strip for ie7
+                || '') + ' > .nav > li > a'
+            this.$body = $('body')
+            this.refresh()
+            this.process()
+        }
+
+        ScrollSpy.prototype = {
+            constructor: ScrollSpy
+
+            ,
+            refresh: function() {
+                var self = this
+                , $targets
+
+                this.offsets = $([])
+                this.targets = $([])
+                $targets = this.$body
+                .find(this.selector)
+                .map(function() {
+                    var $el = $(this)
+                    , href = $el.data('target') || $el.attr('href'),
+                    id = $(href);
+                    if (id.length == 0)
+                        id = $('[data-id='+href.replace('#', '')+']');
+                    var $href = (/^#\w/.test(href) && id);
+                    return ($href
+                        && $href.length
+                        && [[$href.offset().top, href]]) || null
+                })
+                .sort(function(a, b) {
+                    return a[0] - b[0]
+                })
+                .each(function() {
+                    self.offsets.push(this[0])
+                    self.targets.push(this[1])
+                })
+            }
+
+            ,
+            process: function() {
+                var scrollTop = this.$scrollElement.scrollTop() + this.options.offset
+                , scrollHeight = this.$scrollElement[0].scrollHeight || this.$body[0].scrollHeight
+                , maxScroll = scrollHeight - this.$scrollElement.height()
+                , offsets = this.offsets
+                , targets = this.targets
+                , activeTarget = this.activeTarget
+                , i
+
+                //        if (scrollTop >= maxScroll) {
+                //          return activeTarget != (i = targets.last()[0])
+                //            && this.activate ( i )
+                //        }
+
+                for (i = offsets.length; i--; ) {
+                    activeTarget != targets[i]
+                        && scrollTop >= offsets[i]
+                        && (!offsets[i + 1] || scrollTop <= offsets[i + 1])
+                        && this.activate(targets[i])
+                }
+            }
+
+            ,
+            activate: function(target) {
+                var active
+                , selector
+
+                this.activeTarget = target
+
+                $(this.selector)
+                .parent('.active')
+                .removeClass('active')
+
+                selector = this.selector
+                    + '[data-target="' + target + '"],'
+                    + this.selector + '[href="' + target + '"]'
+
+                active = $(selector)
+                .parent('li')
+                .addClass('active')
+
+                if (active.parent('.dropdown-menu').length) {
+                    active = active.closest('li.dropdown').addClass('active')
+                }
+                active.trigger('activate')
+                $('[data-id="'+active.attr('href')+'"], #'+active.attr('href')).addClass('active');
+            }
+
+        }
+
+
+        /* SCROLLSPY PLUGIN DEFINITION
+         * =========================== */
+
+        var old = $.fn.scrollspy
+
+        $.fn.scrollspy = function(option) {
+            return this.each(function() {
+                var $this = $(this)
+                , data = $this.data('scrollspy')
+                , options = typeof option == 'object' && option
+                if (!data)
+                    $this.data('scrollspy', (data = new ScrollSpy(this, options)))
+                if (typeof option == 'string')
+                    data[option]()
+            })
+        }
+
+        $.fn.scrollspy.Constructor = ScrollSpy
+
+        $.fn.scrollspy.defaults = {
+            offset: 10
+        }
+
+
+        /* SCROLLSPY NO CONFLICT
+         * ===================== */
+
+        $.fn.scrollspy.noConflict = function() {
+            $.fn.scrollspy = old
+            return this
+        }
+
+
+        /* SCROLLSPY DATA-API
+         * ================== */
+
+        $(window).on('load', function() {
+            $('[data-spy="scroll"]').each(function() {
+                var $spy = $(this)
+                $spy.scrollspy($spy.data())
+            })
+        })
+
+    }(window.jQuery);
+</script>
+<script>
+    $(document).ready(function() {
+        $('.navbar-fixed-top').find('[href="' + (window.location.pathname == ('/' || '') ? '/index.shtml' : window.location.pathname) + '"]').parent().addClass('active');
+        $("a[href^='#']").click(function(e){
+            var id = $('[data-id='+$(this).attr('href').replace('#', '')+']');
+            if (id.length == 0)
+                id = $($(this).attr('href'));
+            if (id.length > 0)
+                $('body, html').animate({'scrollTop': id.offset().top-60});
+            if (location.hash!='' || location.hash!='#')
+                location.hash = $(this).attr('href');
+            e.preventDefault();
+        });
+        if (location.hash != '')
+            $("a[href='"+location.hash+"']").click();
+        hljs.tabReplace = '    '; //4 spaces
+        hljs.initHighlighting();
+    
+        (function ($){
+            var prN = '_notes_';
+            var t = {
+                comp: 'Компонент'
+            }
+            var notes = {
+                css:{
+                    file: '<sup><a href="#cssfile" title="Файлы CSS">'+prN+'</a></sup>',
+                    btn: '<sup><a href="#htmlbuttons" title="'+t.comp+' кнопок"><i>'+prN+'</i></a></sup>',
+                    icon: '<sup><a href="#htmlicons" title="'+t.comp+' иконок"><i>'+prN+'</i></a></sup>',
+                    tabs: '<sup><a href="#htmltabs" title="'+t.comp+' табиков"><i>'+prN+'</i></a></sup>',
+                    textel: '<sup><a href="#textel" title="Дополнительные селекторы ()"><i>'+prN+'</i></a></sup>',
+                    helper: '<sup><a href="#textel" title="Дополнительные селекторы (helper - отбивка)"><i>'+prN+'</i></a></sup>',
+                    empty: '<sup><a href="#textel" title="Дополнительные селекторы (пустой блок - логический)"><i>'+prN+'</i></a></sup>',
+                    noempty: '<sup><a href="#textel" title="Дополнительные селекторы (не пустой блок - не логически)"><i>'+prN+'</i></a></sup>'
+                },
+                html:{
+                    drop: '<sup><a href="#htmldrop" title="'+t.comp+' попапов"><i>'+prN+'</i></a></sup>'
+                },
+                js: {
+                    datatrigger: '<sup><a href="#datatrigger" title="Обработчик селектора [data-trigger=селектор]"><i>'+prN+'</i></a></sup>'
+                },
+                notproperty: '<span>нет свойства</sup>'
+            }
+            var arrN = [];
+            $('[data-nS]').each(function(){
+                var $this = $(this),
+                dNS = $this.data('ns');
+                if (dNS != '' && eval(dNS) != undefined){
+                    if ($.inArray(dNS, arrN) == -1)
+                        arrN.push(dNS);
+                    $this.addClass('is').html(eval(dNS).replace(prN, $.inArray(dNS, arrN)+1));
+                }
+                else{
+                    $this.addClass('notis').html(notes.notproperty);
+                }
+            });
+        })(jQuery)
+    })
+</script>

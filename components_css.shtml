@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <!--#include file="layouts/site/head.html"-->
+    </head>
+
+    <body data-spy="scroll" data-target="#navbar-example">
+        <div class="main-body">
+            <!-- Fixed navbar -->
+            <!--#include file="layouts/site/menu.html"-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3" id="navbar-example">
+                        <!--#include file="layouts/site/menu_components_css.html"-->
+                    </div>
+                    <div class="col-md-9 scrollspy-example">
+                        <div id="menu">
+                            <!--#include file="content/components_css/menu.html"-->
+                        </div>
+                        <div id="reset">
+                            <!--#include file="content/components_css/reset.html"-->
+                        </div>
+                        <div id="scaffolding">
+                            <!--#include file="content/components_css/scaffolding.html"-->
+                        </div>
+                        <div id="basesettings">
+                            <!--#include file="content/components_css/basesettings.html"-->
+                        </div>
+                        <div id="icons">
+                            <!--#include file="content/components_css/icons.html"-->
+                        </div>
+                        <div id="addingselectors">
+                            <!--#include file="content/components_css/addingselectors.html"-->
+                        </div>
+                        <div id="methods">
+                            <!--#include file="content/components_css/methods.html"-->
+                        </div>
+                        <div id="nav">
+                            <!--#include file="content/components_css/nav.html"-->
+                        </div>
+                        <div id="text">
+                            <!--#include file="content/components_css/text.html"-->
+                        </div>
+                        <div id="items">
+                            <!--#include file="content/components_css/items.html"-->
+                        </div>
+                        <div id="photoblock">
+                            <!--#include file="content/components_css/photoblock.html"-->
+                        </div>
+                        <div id="buttons">
+                            <!--#include file="content/components_css/buttons.html"-->
+                        </div>
+                        <div id="prices">
+                            <!--#include file="content/components_css/prices.html"-->
+                        </div>
+                        <div id="carousels">
+                            <!--#include file="content/components_css/carousels.html"-->
+                        </div>
+                        <div id="form">
+                            <!--#include file="content/components_css/form.html"-->
+                        </div>
+                        <div id="msg">
+                            <!--#include file="content/components_css/msg.html"-->
+                        </div>
+                        <div id="crumbs">
+                            <!--#include file="content/components_css/crumbs.html"-->
+                        </div>
+                        <div id="tabs">
+                            <!--#include file="content/components_css/tabs.html"-->
+                        </div>
+                        <div id="filter">
+                            <!--#include file="content/components_css/filter.html"-->
+                        </div>
+                        <div id="pagination">
+                            <!--#include file="content/components_css/pagination.html"-->
+                        </div>
+                        <div id="drop">
+                            <!--#include file="content/components_css/drop.html"-->
+                        </div>
+                        <div id="tooltip">
+                            <!--#include file="content/components_css/tooltip.html"-->
+                        </div>
+                        <div id="dotted">
+                            <!--#include file="content/components_css/dotted.html"-->
+                        </div>
+                        <div id="title">
+                            <!--#include file="content/components_css/title.html"-->
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- /container -->
+            <!--#include file="layouts/site/footer.html"-->
+        </div>
+    </body>
+</html>

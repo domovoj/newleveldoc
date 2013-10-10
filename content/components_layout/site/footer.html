@@ -1,0 +1,42 @@
+<h3>Футер</h3>
+<p>Визуально область этого блока, выглядит так:<br/>
+    <img src="/uploads/prototype/footer.png"/>
+</p>
+<ol>
+    <li><h5><a href="#topmenu"><i>Верхнее меню</i></a> <code>{load_menu('top_menu')}</code></h5></li>
+    <li><h5><a href="#footermenu"><i>Footer меню</i></a> <code>{\Category\RenderMenu::create()->setConfig(array('cache'=>FALSE))->load('footer_category_menu')}</code></h5></li>
+    <li><h5>Меню пользователя</h5>
+        <pre class="unstyled"><code>&lt;ul&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;{if $is_logged_in}
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button type=&quot;button&quot; onclick=&quot;location = '{site_url('auth/logout')}'&quot; title=&quot;{lang('Выход','newLevel')}&quot;&gt;{lang('Выход','newLevel')}&lt;/button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button type=&quot;button&quot; onclick=&quot;location = '{site_url('shop/profile')}'&quot; title=&quot;{lang('Личный кабинет','newLevel')}&quot;&gt;{lang('Личный кабинет','newLevel')}&lt;/button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button type=&quot;button&quot; onclick=&quot;location = '{site_url('wishlist')}'&quot; title=&quot;{lang('Список желаний','newLevel')}&quot;&gt;{lang('Список желаний','newLevel')}&lt;/button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;{else:}
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button type=&quot;button&quot; data-trigger=&quot;#loginButton&quot; title=&quot;{lang('Вход','newLevel')}&quot;&gt;{lang('Вход','newLevel')}&lt;/button&gt; <span data-nS="notes.js.datatrigger"></span>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button onclick=&quot;location = '{site_url('auth/register')}'&quot; title=&quot;{lang('Регистрация','newLevel')}&quot;&gt;{lang('Регистрация','newLevel')}&lt;/button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;{/if}
+&nbsp;&nbsp;&nbsp;&nbsp;{if $compare = $CI-&gt;session-&gt;userdata('shopForCompare')}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$count = count($compare);}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{if $count &gt; 0}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button type=&quot;button&quot; onclick=&quot;location = '{site_url('shop/compare')}'&quot; title=&quot;{lang('Список сравнений','newLevel')}&quot;&gt;{lang('Список сравнений','newLevel')}&lt;/button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{/if}
+&nbsp;&nbsp;&nbsp;&nbsp;{/if}
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button type=&quot;button&quot; data-trigger=&quot;[data-drop='.drop-order-call']&quot; title=&quot;{lang('Обратный звонок','newLevel')}&quot;&gt;{lang('Обратный звонок','newLevel')}&lt;/button&gt; <span data-nS="notes.js.datatrigger"></span>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+    </li>
+</ol>

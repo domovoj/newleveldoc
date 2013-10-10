@@ -1,0 +1,208 @@
+<h3>Плагин menuImageCms</h3>
+<h4>Место нахождения</h4>
+<p>Файл <a href="#filesplugins"><i>_jquery.imagecms.shop.js</i></a></p>
+<h4>Использование</h4>
+<p>Используэться для <a href="/components_layouts.shtml#subcategorymenu"><i>Главного меню категорий</i></a></p>
+<h4>Описание</h4>
+<p>Плагин поддержывает <b>touch</b> устройства, параметры <code>evLF</code> и <code>evLS</code> (которые отвечают за событие открытия фреймов вторго и третьего уровней) автоматически принимают значение <code>toggle</code></p>
+<p>Рекомендуема структура для основных блоков меню:</p>
+<pre class="unstyled"><code>&lt;li&gt; //по єтому єлементу будет обрабатываться событие (toggle или hover) которое покажет выпадающий блок или же перейдет по силке если вложенных категорий нет</br>
+&nbsp;&nbsp;&lt;a&gt;&hellip;&lt;/a&gt; //этот элемент это ссылка на определенную категорию, он будет участвовать в выборе активного пункта по всей иерархии</br>
+&nbsp;&nbsp;&lt;div&gt; //выпадающий блок
+&nbsp;&nbsp;&nbsp;&hellip;
+&nbsp;&nbsp;&lt;/div&gt;
+&lt;/li&gt;
+</code></pre>
+<p>Плагин определяет по какой стороне будет позиционироватся блок, он дает класы <code>left-drop</code> и <code>right-drop</code> для выпадающего фрейма 2-ых уровней категорий и задает значение свойств <code>left</code> и <code>right</code> соотвественно, </p>
+<p>Плагин добавляет клас <code>is-side</code> для фрейма 3-го уровня категорий, <a href="/examples.shtml#mainmenurow"><i>посмотреть пример</i></a></p>
+<h4>Свойства</h4>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Название параметра</th>
+            <th>значение по умолчанию</th>
+            <th>Описание</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>item</code></td>
+            <td><code>$(this).find('li:first')</code></td>
+            <td>Jquery обьэкт посредством которого будут открыватся вложенные подкатегории, а также позиционироваться</td>
+        </tr>
+        <tr>
+            <td><code>direction</code></td>
+            <td><code>null</code></td>
+            <td>Может быть двох значений <code>left</code> или <code>right</code>. Определяет по кокой стороне выравнивать открытые вложенные подкатегории</td>
+        </tr>
+        <tr>
+            <td><code>effectOn</code></td>
+            <td><code>'fadeIn'</code></td>
+            <td>Задает строковое название ефекта открытия второго уровня категорий</td>
+        </tr>
+        <tr>
+            <td><code>effectOff</code></td>
+            <td><code>'fadeOut'</code></td>
+            <td>Задает строковое название ефекта закрытия второго уровня категорий</td>
+        </tr>
+        <tr>
+            <td><code>effectOnS</code></td>
+            <td><code>'fadeIn'</code></td>
+            <td>Задает строковое название ефекта открытия третего уровня категорий, будет задействован если задан параметр <code>sub2Frame</code></td>
+        </tr>
+        <tr>
+            <td><code>effectOffS</code></td>
+            <td><code>'fadeOut'</code></td>
+            <td>Задает строковое название ефекта закрытия третего уровня категорий, будет задействован если задан параметр <code>sub2Frame</code></td>
+        </tr>
+        <tr>
+            <td><code>duration</code></td>
+            <td><code>0</code></td>
+            <td>Задержка перед открытием вторго уровня категорий, она принимает значение "0" если идет перемещение между соседними пунктами категорий</td>
+        </tr>
+        <tr>
+            <td><code>drop</code></td>
+            <td><code>'li > ul'</code></td>
+            <td>Селектор фрейма второго уровня категорий, он должен быть вложен в элемент заданый в параметре <code>item</code></td>
+        </tr>
+        <tr>
+            <td><code>countColumn</code></td>
+            <td><code>'none'</code></td>
+            <td>Количество колонок второго уровня категорий (нужно указывать максимальное количество), если параметр <code>sub2Frame</code> со значением <code>null</code>, то <a href="/examples.shtml#mainmenucol"><i>меню будет иметь вид</i></a></td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <span class="h4">Сортировка категорий, номера колонок которых</span> <a href="/admin.shtml#columns"><i>выбранные в админ</i></a>
+            </td>
+        </tr>
+        <tr>
+            <td><code>columnPart</code></td>
+            <td><code>false</code></td>
+            <td>Опердиляет нужно ли сортировать категории 2-го уровня</td>
+        </tr>
+        <tr>
+            <td><code>columnPart2</code></td>
+            <td><code>false</code></td>
+            <td>Опердиляет нужно ли сортировать категории 3-го уровня</td>
+        </tr>
+        <tr>
+            <td><code>columnClassPref</code></td>
+            <td><code>'column_'</code></td>
+            <td>Префикс названия класа для пункта второго уровня категорий</td>
+        </tr>
+        <tr>
+            <td><code>columnClassPref2</code></td>
+            <td><code>'column2_'</code></td>
+            <td>Префикс названия класа для пункта третего уровня категорий</td>
+        </tr>
+        <tr>
+            <td><code>sub3Frame</code></td>
+            <td><code>'ul ul'</code></td>
+            <td>Селектор фрейма 3-го уровня категорий, селектор должен быть вложен в элемент заданый в параметре <code>drop</code></td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <hr/>
+            </td>
+        </tr>
+        <tr>
+            <td><code>durationOn</code></td>
+            <td><code>0</code></td>
+            <td>Продолжытельнось открытия фрейма 2-го уровня категорий</td>
+        </tr>
+        <tr>
+            <td><code>durationOff</code></td>
+            <td><code>0</code></td>
+            <td>Продолжытельнось закрытие фрейма 2-го уровня категорий</td>
+        </tr>
+        <tr>
+            <td><code>durationOnS</code></td>
+            <td><code>0</code></td>
+            <td>Продолжытельнось открытия фрейма 3-го уровня категорий, будет задействован если задан параметр <code>sub2Frame</code></td>
+        </tr>
+        <tr>
+            <td><code>durationOffS</code></td>
+            <td><code>0</code></td>
+            <td>Продолжытельнось закрытие фрейма 3-го уровня категорий, будет задействован если задан параметр <code>sub2Frame</code></td>
+        </tr>
+        <tr>
+            <td><code>animatesub3</code></td>
+            <td><code>false</code></td>
+            <td>Опредиляет нужно ли при открытии 3-го уровня категорий использовать анимацию для задания размеров общиг враперов 2-го и 3-го уровней</td>
+        </tr>
+        <tr>
+            <td><code>dropWidth</code></td>
+            <td><code>null</code></td>
+            <td>Определяет шырину выпадающей менюшки 2-го уровня категорий</td>
+        </tr>
+        <tr>
+            <td><code>sub2Frame</code></td>
+            <td><code>null</code></td>
+            <td>Если указано то 3-й уровень будет выпадать <a href="/examples.shtml#mainmenurowcol3"><i>слева</i></a>, <a href="/examples.shtml#mainmenurowright"><i>справа</i></a>, или даже <a href="/examples.shtml#mainmenurowdown"><i>вниз</i></a> если параметр <code>sub2Frame</code> со значением <code>null</code>, то <a href="/examples.shtml#mainmenucol"><i>меню будет иметь вид</i></a></td>
+        </tr>
+        <tr>
+            <td><code>evLF</code></td>
+            <td><code>'hover'</code></td>
+            <td>Событие по которму будет открыватся и закрыватся фрейм 2-го уровня категорий</td>
+        </tr>
+        <tr>
+            <td><code>evLS</code></td>
+            <td><code>'hover'</code></td>
+            <td>Событие по которму будет открыватся и закрыватся фрейм 3-го уровня категорий</td>
+        </tr>
+        <tr>
+            <td><code>hM</code></td>
+            <td><code>'hoverM'</code></td>
+            <td>Этот клас будет присваивается по наведению или клику (параметры <code>evLF</code> и <code>evLS</code>) на елемет для которого вызывается плагин, на пункт меню первого уровня и второго уровня</td>
+        </tr>
+        <tr>
+            <td><code>vertical</code></td>
+            <td><code>false</code></td>
+            <td>Опредиляет вертикальное меню <a href="/examples.shtml#mainmenuvertical"><i>пример вертикального меню</i></a></td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <span class="h4">Кэш</span>
+            </td>
+        </tr>
+        <tr>
+            <td><code>menuCache</code></td>
+            <td><code>false</code></td>
+            <td>Если этот параметр <code>true</code> то активный пункт определяется посредством плагина</td>
+        </tr>
+        <tr>
+            <td><code>activeFl</code></td>
+            <td><code>activeClass</code></td>
+            <td>селектор сылки первого уровня категорий</td>
+        </tr>
+        <tr>
+            <td><code>parentTl</code></td>
+            <td><code>'li'</code></td>
+            <td>Слейдущий соседний селектор сылки второго уровня категорий</td>
+        </tr>
+        <tr>
+            <td><code>otherPage</code></td>
+            <td><code>undefined</code></td>
+            <td>Используется для выбора активного пункта если пользователь находится на странице товара должен содержать полный адрес к товару через все категории</td>
+        </tr>
+    </tbody>
+</table>
+<h4>Методы</h4>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Название метода</th>
+            <th>Описание</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>init</code></td>
+            <td>Метод вызывается при инициализации скрипта</td>
+        </tr>
+        <tr>
+            <td><code>refresh</code></td>
+            <td>Метод принимает переинициализацию меню</td>
+        </tr>
+    </tbody>
+</table>

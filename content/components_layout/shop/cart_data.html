@@ -1,0 +1,47 @@
+<h3>Мини корзина</h3>
+<h4>Место нахождения</h4>
+<code class="alert-success">cart_data.tpl</code> находится в папке <code>"Название шаблона"/shop/cart_data.tpl</code>
+<h4>Использование</h4>
+<p>Используется для просмотра и редактирование корзины</p>
+<h4>Компоненты</h4>
+<span class="h5">Компоненти</span> <b>HTML</b>:
+<pre class="unstyled"><code>&lt;div class=&quot;btn-bask tiny-bask&quot;&gt; <span data-nS="notes.css.btn"></span>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;frame-icon&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;icon_cleaner&quot;&gt;&lt;/span&gt; <span data-nS="notes.css.icon"></span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;text-cleaner bask&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;empty&quot;&gt; <span data-nS="notes.css.empty"></span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;helper&quot;&gt;&lt;/span&gt; <span data-nS="notes.css.helper"></span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;text-el&quot;&gt;{lang('Корзина пуста','newLevel')}&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;no-empty&quot;&gt; <span data-nS="notes.css.noempty"></span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;helper&quot;&gt;&lt;/span&gt; <span data-nS="notes.css.helper"></span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;text-el topCartCount&quot;&gt;{echo ShopCore::app()-&gt;SCart-&gt;totalItems()}&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;text-el&quot;&gt;&amp;nbsp;&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;text-el plurProd&quot;&gt;{echo SStringHelper::Pluralize(ShopCore::app()-&gt;SCart-&gt;totalItems(), array(lang('товар','newLevel'),lang('товара','newLevel'),lang('товаров','newLevel')))}&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;divider text-el&quot;&gt;&amp;#8226;&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;d_i-b&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;text-el topCartTotalPrice&quot;&gt;{echo str_replace(',', '.', ShopCore::app()-&gt;SCart-&gt;totalPrice())}&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;text-el&quot;&gt;&amp;nbsp;&lt;span class=&quot;curr&quot;&gt;{$CS}&lt;/span&gt;&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<span class="h5">Компоненти</span> <b>CSS</b>:
+<p>Здесь собраны стандартные компоненты CSS</p>
+<span class="h5">Компоненти</span> <b>JS</b>:
+<ul>
+    <li><code>countSumBask()</code> - делает активной/неактивной кнопку вызова корзины, а также подсчитывает количество и суму <a href="/components_js.shtml#countSumBask"><i>подробно о функции</i></a> <code>countSumBask()</code></li>
+    <li>Событие <code>click.toTiny</code>
+        <pre class="unstyled"><code>$('#bask_block').on('click.toTiny', genObj.tinyBask + '.' + genObj.isAvail, function() {
+&nbsp;&nbsp;&nbsp;&nbsp;initShopPage(true); <a href="/components_js.shtml#initShopPage"><i>Подороно о функции</i></a>
+})</code></pre>
+    </li>
+</ul>

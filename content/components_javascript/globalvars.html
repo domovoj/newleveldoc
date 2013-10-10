@@ -1,0 +1,316 @@
+<h2>Глобальные переменные</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Переменная</th>
+            <th>Описание</th>
+            <th>Использование</th>
+            <th>Значение</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>selectDeliv</code></td>
+            <td>
+                <p>если <code>true</code> то в шаблоне должен использоваться нестандартный селект для способов доставки, згенерирован посредством плагина <code>cusel</code>, если <code>false</code>, то должны использоваться радиобатоны в способах доставки</p>
+            </td>
+            <td>
+                <div><a href="#"><i>cart.tpl</i></a></div>
+                <div><a href="#"><i>_scripts.js</i></a></div>
+            </td>
+            <td><code>true|false</code></td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <span class="h4" id="photoTovar">Фото на странице товара</span>
+                <div class="alert alert-info">
+                    Можно не определять ни одну из етих переменных, тогда будет использовано простое переключение фото
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td><code>productPhotoCZoom</code></td>
+            <td>
+                <p>Если определана переменная то будет использован плагин <a href="#"><i>cloud-zoom</i></a> для отображение большого фото на странице товара</p>
+            </td>
+            <td>
+                <div><a href="#"><i>product.tpl</i></a></div>
+                <div><a href="#"><i>cloud-zoom.1.0.3.min.js</i></a></div>
+                <div><a href="#"><i>_scripts.js</i></a></div>
+            </td>
+            <td>
+                <code>true</code> или не опредилять
+            </td>
+        </tr>
+        <tr>
+            <td><code>productPhotoDrop</code></td>
+            <td>
+                <p>Если определана переменная то будет использован плагин <a href="#"><i>drop</i></a> для отображение большого фото на странице товара</p>
+            </td>
+            <td>
+                <div><a href="#"><i>product.tpl</i></a></div>
+                <div><a href="#"><i>jquery.imagecms.shop.js</i></a></div>
+                <div><a href="#"><i>_scripts.js</i></a></div>
+            </td>
+            <td>
+                <code>true</code> или не опредилять
+            </td>
+        </tr>
+        <tr>
+            <td><code>productPhotoFancybox</code></td>
+            <td>
+                <p>Если определана переменная то будет использован плагин <a href="#"><i>fancybox</i></a> для отображение большого фото на странице товара</p>
+            </td>
+            <td>
+                <div><a href="#"><i>product.tpl</i></a></div>
+                <div><a href="#"><i>jquery.fancybox-1.3.4.pack.js</i></a></div>
+                <div><a href="#"><i>_scripts.js</i></a></div>
+            </td>
+            <td>
+                <code>true</code> или не опредилять
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <hr/>
+            </td>
+        </tr>
+        <tr>
+            <td><code>hrefCategoryProduct</code></td>
+            <td>
+                содержыть абсолютный путь, для выбора активных категорий в главном меню категорий і в меню категорий в футере
+            </td>
+            <td>
+                <div><a href="#"><i>product.tpl</i></a></div>
+                <div><a href="#"><i>обект optionsMenu</i></a></div>
+            </td>
+            <td>
+                {$category_url} в шаблоне <a href="#"><i>product.tpl</i></a><br/>
+                <a href="#optionsMenu"><i>обект optionsMenu</i></a>
+            </td>
+        </tr>
+        <tr>
+            <td><code>selIcons</code></td>
+            <td></td>
+            <td>
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>preloader</code></td>
+            <td></td>
+            <td>
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>selScrollPane</code></td>
+            <td></td>
+            <td>
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>curr</code></td>
+            <td></td>
+            <td>
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>nextCs</code></td>
+            <td></td>
+            <td>
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>discountInPopup</code></td>
+            <td></td>
+            <td>
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>pricePrecision</code></td>
+            <td></td>
+            <td>
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>checkProdStock</code></td>
+            <td></td>
+            <td>
+
+            </td>
+            <td></td>
+        <tr>
+            <td><code>inCart</code></td>
+            <td></td>
+            <td>
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>toCart</code></td>
+            <td></td>
+            <td>
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>pcs</code></td>
+            <td></td>
+            <td>
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>kits</code></td>
+            <td></td>
+            <td>
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>captchaText</code></td>
+            <td></td>
+            <td>
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>isLogin</code></td>
+            <td></td>
+            <td>
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>inServerCart</code></td>
+            <td></td>
+            <td>
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>inServerCompare</code></td>
+            <td></td>
+            <td>
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>inServerWishList</code></td>
+            <td></td>
+            <td>
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>countViewProd</code></td>
+            <td></td>
+            <td>
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>theme</code></td>
+            <td></td>
+            <td>
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>plurProd</code></td>
+            <td></td>
+            <td>
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>plurKits</code></td>
+            <td></td>
+            <td>
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>plurComments</code></td>
+            <td></td>
+            <td>
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>isTouch</code></td>
+            <td></td>
+            <td>
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>wnd</code></td>
+            <td></td>
+            <td>
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>body</code></td>
+            <td></td>
+            <td>
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>ie</code></td>
+            <td></td>
+            <td>
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>ltie7</code></td>
+            <td></td>
+            <td>
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>ltie8</code></td>
+            <td></td>
+            <td>
+
+            </td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>

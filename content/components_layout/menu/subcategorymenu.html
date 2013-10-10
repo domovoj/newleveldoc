@@ -1,0 +1,78 @@
+<h3>Главное меню категорий</h3>
+<h4>Место нахождения</h4>
+<p>Папка <code class="alert-success">category_menu</code> находиться в корне папки шаблона.</p>
+<h4>Структура</h4>
+<pre>
+NewLevel/
+├── level_0
+│   ├── container.tpl
+│   ├── item_default.tpl
+│   │
+│   ├── <span class="s-t">item_first.tpl</span>         │
+│   ├── <span class="s-t">item_last.tpl</span>          └── <span class="text-info">не используються</span>
+│   │
+│   ├── <span class="s-t">item_default_active.tpl</span>│
+│   ├── <span class="s-t">item_first_active.tpl</span>  │
+<span class="f_l">│   ├── <span class="s-t">item_last_active.tpl</span>   └── </span><span class="o_h"><span class="text-info">не используються поскольку активный пункт опредиляется посредством <b>JS</b>, в строке вызова опредиляется как <span class="text-danger">->setConfig(array('cache'=>TRUE))</span></span></span>
+├── level_1
+├── &hellip;
+└── level_N
+</pre>
+<h4>Использование</h4>
+<p>
+    Используется для отображений категорий<br/>
+    Рендер меню: <code>{\Category\RenderMenu::create()-&gt;setConfig(array('cache'=&gt;TRUE))-&gt;load('category_menu')}</code><br/>
+    Находится в главном шаблоне <code class="alert-success">main.tpl</code>
+</p>
+<h4>Компоненты</h4>
+<p>Файл <code class="alert-success">main.tpl</code>там находятся строка:</p>
+<ul>
+    <li>
+        <p><code>&lt;div class="frame-menu-main <span class="text-success">[type menu level0]</span>"&gt;</code>, где:</p>
+        <ul>
+            <li><code>frame-menu-main</code> - клас стилизации</li>
+            <li><code class="text-success">[type menu level0]</code> - может иметь клас (<code>horizontal-menu</code> <a href="/examples.shtml#mainmenuhorizontal"><i>пример</i></a>) или (<code>vertical-menu</code> <a href="/examples.shtml#mainmenuvertical"><i>пример</i></a>)</li>
+        </ul>
+    </li>
+</ul>
+<h5>Первый уровень (<code>level_0</code>)</h5>
+<p>Файл <code class="alert-success">container.tpl</code> выступает контейнером первого уровня меню, там находятся одна главная строка:</p>
+<ul>
+    <li>
+        <p><code>&lt;div class="menu-main not-js <span class="text-success">[type menu level1]</span>"&gt;&lt;/div&gt;</code>, где клас:</p>
+        <ul>
+            <li><code>menu-main</code> - клас стилизации</li>
+            <li><code>not-js</code> - клас который удаляется если включен <b>JS</b></li>
+            <li><code class="text-success">[type menu level1]</code> - может иметь клас (<code>menu-row-category</code> <a href="examples.shtml#mainmenurow"><i>пример</i></a>) или (<code>menu-col-category</code> <a href="examples.shtml#mainmenucol"><i>пример</i></a>)</li>
+        </ul>
+    </li>
+</ul>
+<h5>Второй уровень (<code>level_1</code>)</h5>
+<p>Файл <code class="alert-success">item_default.tpl</code> выступает шаблоном для пунктов 2-го уровня категорий меню, там находится одна главная строка:</p>
+<pre class="unstyled"><code>&lt;li class="column_{echo $CI->load->module('new_level')->getCategoryColumns($id)}"&gt;&lt;/li&gt;</code></pre>
+<p>Выводить номер колонки выбраной в админке:</p>
+<pre class="unstyled"><code>{echo $CI->load->module('new_level')->getCategoryColumns($id)}</code></pre>
+<p>Префикс <code>column_</code> нужен для сортировки категори по колонках, опредиляется в админке в настройках модуля NewLevel <a href="/admin.shtml#columns"><i>подробнее</i></a>, используется в <b>JS</b> обекте <a href="components_js.shtml#optionsMenu"><i>optionsMenu</i></a></p>
+<h5>Третий уровень (<code>level_2</code>)</h5>
+<p>Файл <code class="alert-success">item_default.tpl</code> выступает шаблоном для пунктов 3-го уровня категорий меню, там находится одна главная строка:</p>
+<pre class="unstyled"><code>&lt;li class="column2_{echo $CI->load->module('new_level')->getCategoryColumns($id)}"&gt;&lt;/li&gt;</code></pre>
+<p>Выводить номер колонки выбраной в админке:</p>
+<pre class="unstyled"><code>{echo $CI->load->module('new_level')->getCategoryColumns($id)}</code></pre>
+<p>Префикс <code>column2_</code> нужен для сортировки категорий по колонках, опредиляется в админке в настройках модуля NewLevel <a href="/admin.shtml#columns"><i>подробнее</i></a>, используется в <b>JS</b> обекте <a href="components_js.shtml#optionsMenu"><i>optionsMenu</i></a></p>
+<p class="alert alert-info">Можно добавлять и следующие уровни</p>
+<h4>Разные варианты отображения</h4>
+<ul>
+    <li><a href="/examples.shtml#mainmenuhorizontal"><i>Горизонтальное меню</i></a></li>
+    <li><a href="/examples.shtml#mainmenuvertical"><i>Вертикальное меню</i></a></li>
+    <li><a href="examples.shtml#mainmenucol"><i>Меню выводу второго уровня категорий столбиками</i></a></li>
+    <li><a href="examples.shtml#mainmenurow"><i>Меню выводу второго уровня категорий колонками</i></a></li>
+    <li><a href="examples.shtml#mainmenuсolcol3"><i>Меню выводу второго уровня категорий колонками + колонками 3-й уровень категорий</i></a></li>
+    <li><a href="examples.shtml#mainmenurowcol3"><i>Меню выводу второго уровня категорий строками + колонками 3-й уровень категорий</i></a></li>
+</ul>
+<h4>Другие компоненты</h4>
+<ul>
+    <li><a href="/components_css.shtml#menu"><i>Компонент CSS</i></a></li>
+    <li><a href="/components_js.shtml#menuImageCms"><i>Компонент JS</i></a></li>
+    <li><a href="/components_js.shtml#optionsMenu"><i>Компонент JS-инициализация</i></a></li>
+</ul>
+<div class="alert alert-info">после каждного изминения нужно чистить <a href="/admin.shtml#cache" class="alert-link"><i>кэш в админке</i></a> или убрать подстроку <code>-&gt;setConfig(array('cache'=&gt;TRUE))</code></div>

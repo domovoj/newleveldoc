@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <!--#include file="layouts/site/head.html"-->
+    </head>
+
+    <body data-spy="scroll" data-target="#navbar-example">
+        <div class="main-body">
+            <!-- Fixed navbar -->
+            <!--#include file="layouts/site/menu.html"-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3" id="navbar-example">
+                        <!--#include file="layouts/site/menu_examples.html"-->
+                    </div>
+                    <div class="col-md-9 scrollspy-example">
+                        <div data-id="menus">
+                            <div id="mainmenucategories">
+                                <!--#include file="content/examples/menus/mainmenucategories.html"-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- /container -->
+            <!--#include file="layouts/site/footer.html"-->
+        </div>
+    </body>
+</html>

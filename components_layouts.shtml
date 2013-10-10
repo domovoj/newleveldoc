@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <!--#include file="layouts/site/head.html"-->
+    </head>
+
+    <body data-spy="scroll" data-target="#navbar-example">
+        <div class="main-body">
+            <!-- Fixed navbar -->
+            <!--#include file="layouts/site/menu.html"-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3" id="navbar-example">
+                        <!--#include file="layouts/site/menu_components_layout.html"-->
+                    </div>
+                    <div class="col-md-9 scrollspy-example">
+                        <div id="components">
+                            <!--#include file="content/components_layout/components.html"-->
+                        </div>
+                        <div data-id="shop">
+                            <!--#include file="content/components_layout/shop.html"-->
+                            <div id="auth_data">
+                                <!--#include file="content/components_layout/shop/auth_data.html"-->
+                            </div>
+                            <div id="callback">
+                                <!--#include file="content/components_layout/shop/callback.html"-->
+                            </div>
+                            <div id="cart_data">
+                                <!--#include file="content/components_layout/shop/cart_data.html"-->
+                            </div>
+                            <div id="catalogue_header">
+                                <!--#include file="content/components_layout/shop/catalogue_header.html"-->
+                            </div>
+                            <div id="compare_data">
+                                <!--#include file="content/components_layout/shop/compare_data.html"-->
+                            </div>
+                            <div id="js_template">
+                                <!--#include file="content/components_layout/shop/js_template.html"-->
+                            </div>
+                            <div id="pattern_custom_field">
+                                <!--#include file="content/components_layout/shop/pattern_custom_field.html"-->
+                            </div>
+                            <div id="profile_data">
+                                <!--#include file="content/components_layout/shop/profile_data.html"-->
+                            </div>
+                            <div id="profile_change_pass">
+                                <!--#include file="content/components_layout/shop/profile_change_pass.html"-->
+                            </div>
+                            <div id="profile_history">
+                                <!--#include file="content/components_layout/shop/profile_history.html"-->
+                            </div>
+                            <div id="report_appearance">
+                                <!--#include file="content/components_layout/shop/report_appearance.html"-->
+                            </div>
+                            <div id="wish_list_data">
+                                <!--#include file="content/components_layout/shop/wish_list_data.html"-->
+                            </div>
+                            <div id="helper">
+                                <!--#include file="content/components_layout/shop/helper.html"-->
+                            </div>
+                        </div>
+                        <div data-id="site">
+                            <!--#include file="content/components_layout/site.html"-->
+                            <div id="config">
+                                <!--#include file="content/components_layout/site/config.html"-->
+                            </div>
+                            <div id="header">
+                                <!--#include file="content/components_layout/site/header.html"-->
+                            </div>
+                            <div id="footer">
+                                <!--#include file="content/components_layout/site/footer.html"-->
+                            </div>
+                            <div id="login_popup">
+                                <!--#include file="content/components_layout/site/login_popup.html"-->
+                            </div>
+                            <div id="register">
+                                <!--#include file="content/components_layout/site/register.html"-->
+                            </div>
+                            <div id="forgot_password">
+                                <!--#include file="content/components_layout/site/forgot_password.html"-->
+                            </div>
+                            <div id="user_toolbar">
+                                <!--#include file="content/components_layout/site/user_toolbar.html"-->
+                            </div>
+                        </div>
+                        <div id="drop">
+                            <!--#include file="content/components_layout/drop.html"-->
+                        </div>
+                        <div data-id="menus">
+                            <!--#include file="content/components_layout/menus.html"-->
+                            <div id="topmenu">
+                                <!--#include file="content/components_layout/menu/topmenu.html"-->
+                            </div>
+                            <div id="catogorymenu">
+                                <!--#include file="content/components_layout/menu/catogorymenu.html"-->
+                            </div>
+                            <div id="subcategorymenu">
+                                <!--#include file="content/components_layout/menu/subcategorymenu.html"-->
+                            </div>
+                            <div id="ftsubcategorymenu">
+                                <!--#include file="content/components_layout/menu/ftsubcategorymenu.html"-->
+                            </div>
+                            <div id="sdsubcategorymenu">
+                                <!--#include file="content/components_layout/menu/sdsubcategorymenu.html"-->
+                            </div>
+                            <div id="categorymenufront">
+                                <!--#include file="content/components_layout/menu/categorymenufront.html"-->
+                            </div>
+                            <div id="categorymenufooter">
+                                <!--#include file="content/components_layout/menu/categorymenufooter.html"-->
+                            </div>
+                            <div id="footermenu">
+                                <!--#include file="content/components_layout/menu/footermenu.html"-->
+                            </div>
+                            <div id="staticpagescategoriesmenu">
+                                <!--#include file="content/components_layout/menu/staticpagescategoriesmenu.html"-->
+                            </div>
+                        </div>
+                        <div data-id="modules">
+                            <!--#include file="content/components_layout/modules.html"-->
+                            <div id="newlevel">
+                                <!--#include file="content/components_layout/module/newlevel.html"-->
+                            </div>
+                            <div id="banners">
+                                <!--#include file="content/components_layout/module/banners.html"-->
+                                <div id="bannerstartpage">
+                                    <!--#include file="content/components_layout/module/bannerstartpage.html"-->
+                                </div>
+                                <div id="bannercategory">
+                                    <!--#include file="content/components_layout/module/bannercategory.html"-->
+                                </div>
+                            </div>
+                            <div id="comments">
+                                <!--#include file="content/components_layout/module/comments.html"-->
+                            </div>
+                            <div id="discount">
+                                <!--#include file="content/components_layout/module/discount.html"-->
+                            </div>
+                            <div id="wishlist">
+                                <!--#include file="content/components_layout/module/wishlist.html"-->
+                            </div>
+                            <div id="rating">
+                                <!--#include file="content/components_layout/module/rating.html"-->
+                            </div>
+                            <div id="filter">
+                                <!--#include file="content/components_layout/module/filter.html"-->
+                            </div>
+                            <div id="socweb">
+                                <!--#include file="content/components_layout/module/socweb.html"-->
+                            </div>
+                        </div>
+                        <div data-id="widgets">
+                            <!--#include file="content/components_layout/widgets.html"-->
+                            <div data-id="products">
+                                <!--#include file="content/components_layout/widget/products.html"-->
+                                <div id="viewproducts">
+                                    <!--#include file="content/components_layout/widget/viewproducts.html"-->
+                                </div>
+                                <div id="similarproducts">
+                                    <!--#include file="content/components_layout/widget/similarproducts.html"-->
+                                </div>
+                                <div id="actionproducts">
+                                    <!--#include file="content/components_layout/widget/actionproducts.html"-->
+                                </div>
+                                <div id="popularproducts">
+                                    <!--#include file="content/components_layout/widget/popularproducts.html"-->
+                                </div>
+                                <div id="popularproductscategory">
+                                    <!--#include file="content/components_layout/widget/popularproductscategory.html"-->
+                                </div>
+                                <div id="newproducts">
+                                    <!--#include file="content/components_layout/widget/newproducts.html"-->
+                                </div>
+                            </div>
+                            <div id="brands">
+                                <!--#include file="content/components_layout/widget/brands.html"-->
+                            </div>
+                            <div id="latestnews">
+                                <!--#include file="content/components_layout/widget/latestnews.html"-->
+                            </div>
+                            <div id="crumbs">
+                                <!--#include file="content/components_layout/widget/crumbs.html"-->
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- /container -->
+                <!--#include file="layouts/site/footer.html"-->
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <!--#include file="layouts/site/head.html"-->
+    </head>
+
+    <body data-spy="scroll" data-target="#navbar-example" data-offset="70">
+        <div class="main-body">
+            <!-- Fixed navbar -->
+            <!--#include file="layouts/site/menu.html"-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3" id="navbar-example">
+                        <!--#include file="layouts/site/menu_components_js.html"-->
+                    </div>
+                    <div class="col-md-9 scrollspy-example">
+                        <div data-id="files">
+                            <!--#include file="content/components_javascript/files.html"-->
+                            <div id="fileslibraries">
+                                <!--#include file="content/components_javascript/files/fileslibraries.html"-->
+                            </div>
+                            <div id="filesplugins">
+                                <!--#include file="content/components_javascript/files/filesplugins.html"-->
+                            </div>
+                            <div id="filesunitedfiles">
+                                <!--#include file="content/components_javascript/files/filesunitedfiles.html"-->
+                            </div>
+                            <div id="filesmodules">
+                                <!--#include file="content/components_javascript/files/filesmodules.html"-->
+                            </div>
+                        </div>
+                        <div id="globalvars">
+                            <!--#include file="content/components_javascript/globalvars.html"-->
+                        </div>
+                        <div data-id="objects">
+                            <!--#include file="content/components_javascript/objects.html"-->
+                            <div id="optionsMenu">
+                                <!--#include file="content/components_javascript/objects/optionsMenu.html"-->
+                            </div>
+                            <div id="scrollPane">
+                                <!--#include file="content/components_javascript/objects/scrollPane.html"-->
+                            </div>
+                            <div id="carousel">
+                                <!--#include file="content/components_javascript/objects/carousel.html"-->
+                            </div>
+                            <div id="optionCompare">
+                                <!--#include file="content/components_javascript/objects/optionCompare.html"-->
+                            </div>
+                            <div id="optionsDrop">
+                                <!--#include file="content/components_javascript/objects/optionsDrop.html"-->
+                            </div>
+                            <div id="productStatus">
+                                <!--#include file="content/components_javascript/objects/productStatus.html"-->
+                            </div>
+                            <div id="imageCmsApiDefaults">
+                                <!--#include file="content/components_javascript/objects/imageCmsApiDefaults.html"-->
+                            </div>
+                            <div id="icons">
+                                <!--#include file="content/components_javascript/objects/icons.html"-->
+                            </div>
+                            <div id="genObj">
+                                <!--#include file="content/components_javascript/objects/genObj.html"-->
+                            </div>
+                            <div id="cuselOptions">
+                                <!--#include file="content/components_javascript/objects/cuselOptions.html"-->
+                            </div>
+                            <div id="message">
+                                <!--#include file="content/components_javascript/objects/message.html"-->
+                            </div>
+                            <div id="lazyload">
+                                <!--#include file="content/components_javascript/objects/lazyload.html"-->
+                            </div>
+                            <div id="text">
+                                <!--#include file="content/components_javascript/objects/text.html"-->
+                            </div>
+                            <div id="tabs">
+                                <!--#include file="content/components_javascript/objects/tabs.html"-->
+                            </div>
+                            <div id="objectshop">
+                                <!--#include file="content/components_javascript/objects/objectshop.html"-->
+                            </div>
+                            <div id="objectcart">
+                                <!--#include file="content/components_javascript/objects/objectcart.html"-->
+                            </div>
+                            <div id="objectcompare">
+                                <!--#include file="content/components_javascript/objects/objectcompare.html"-->
+                            </div>
+                            <div id="objectimagecmsapi">
+                                <!--#include file="content/components_javascript/objects/objectimagecmsapi.html"-->
+                            </div>
+                            <div id="objectwishlist">
+                                <!--#include file="content/components_javascript/objects/objectwishlist.html"-->
+                            </div>
+                            <div id="objectcomments">
+                                <!--#include file="content/components_javascript/objects/objectcomments.html"-->
+                            </div>
+                        </div>
+                        <div data-id="plugins">
+                            <div id="pluginsLayout">
+                                <!--#include file="content/components_javascript/plugins.html"-->
+                            </div>
+                            <div id="actual">
+                                <!--#include file="content/components_javascript/plugins/actual.html"-->
+                            </div>
+                            <div id="drop">
+                                <!--#include file="content/components_javascript/plugins/drop.html"-->
+                            </div>
+                            <div id="tabs">
+                                <!--#include file="content/components_javascript/plugins/tabs.html"-->
+                            </div>
+                            <div id="equalhorizcell">
+                                <!--#include file="content/components_javascript/plugins/equalhorizcell.html"-->
+                            </div>
+                            <div id="nStCheck">
+                                <!--#include file="content/components_javascript/plugins/nStCheck.html"-->
+                            </div>
+                            <div id="nStRadio">
+                                <!--#include file="content/components_javascript/plugins/nStRadio.html"-->
+                            </div>
+                            <div id="autocomplete">
+                                <!--#include file="content/components_javascript/plugins/autocomplete.html"-->
+                            </div>
+                            <div id="tooltip">
+                                <!--#include file="content/components_javascript/plugins/tooltip.html"-->
+                            </div>
+                            <div id="menuImageCms">
+                                <!--#include file="content/components_javascript/plugins/menuImageCms.html"-->
+                            </div>
+                            <div id="plusminus">
+                                <!--#include file="content/components_javascript/plugins/plusminus.html"-->
+                            </div>
+                            <div id="minValue">
+                                <!--#include file="content/components_javascript/plugins/minValue.html"-->
+                            </div>
+                            <div id="maxValue">
+                                <!--#include file="content/components_javascript/plugins/maxValue.html"-->
+                            </div>
+                            <div id="myCarousel">
+                                <!--#include file="content/components_javascript/plugins/myCarousel.html"-->
+                            </div>
+                            <div id="sliderInit">
+                                <!--#include file="content/components_javascript/plugins/sliderInit.html"-->
+                            </div>
+                            <div id="cleaverFilterMethod">
+                                <!--#include file="content/components_javascript/plugins/cleaverFilterMethod.html"-->
+                            </div>
+                            <div id="cloneAddPaste">
+                                <!--#include file="content/components_javascript/plugins/cloneAddPaste.html"-->
+                            </div>
+                            <div id="starRating">
+                                <!--#include file="content/components_javascript/plugins/starRating.html"-->
+                            </div>
+                        </div>
+                        <div data-id="functions">
+                            <!--#include file="content/components_javascript/functions/functions.html"-->
+                            <div data-id="shopfunctions">
+                                <!--#include file="content/components_javascript/functions/shopfunctions.html"-->
+                                <div id="tovarChangeVariant">
+                                    <!--#include file="content/components_javascript/functions/shop/tovarChangeVariant.html"-->
+                                </div>
+                                <div id="tovarChangeCount">
+                                    <!--#include file="content/components_javascript/functions/shop/tovarChangeCount.html"-->
+                                </div>
+                                <div id="pasteItemsTovars">
+                                    <!--#include file="content/components_javascript/functions/shop/pasteItemsTovars.html"-->
+                                </div>
+                                <div id="processComp">
+                                    <!--#include file="content/components_javascript/functions/shop/processComp.html"-->
+                                </div>
+                                <div id="processWish">
+                                    <!--#include file="content/components_javascript/functions/shop/processWish.html"-->
+                                </div>
+                                <div id="processCarts">
+                                    <!--#include file="content/components_javascript/functions/shop/processCarts.html"-->
+                                </div>
+                                <div id="processBtnBuyCount">
+                                    <!--#include file="content/components_javascript/functions/shop/processBtnBuyCount.html"-->
+                                </div>
+                                <div id="getDiscount">
+                                    <!--#include file="content/components_javascript/functions/shop/getDiscount.html"-->
+                                </div>
+                                <div id="getKitDiscount">
+                                    <!--#include file="content/components_javascript/functions/shop/getKitDiscount.html"-->
+                                </div>
+                                <div id="hideInfoDiscount">
+                                    <!--#include file="content/components_javascript/functions/shop/hideInfoDiscount.html"-->
+                                </div>
+                                <div id="displayInfoDiscount">
+                                    <!--#include file="content/components_javascript/functions/shop/displayInfoDiscount.html"-->
+                                </div>
+                                <div id="displayDiscount">
+                                    <!--#include file="content/components_javascript/functions/shop/displayDiscount.html"-->
+                                </div>
+                                <div id="applyGift">
+                                    <!--#include file="content/components_javascript/functions/shop/applyGift.html"-->
+                                </div>
+                                <div id="renderGiftInput">
+                                    <!--#include file="content/components_javascript/functions/shop/renderGiftInput.html"-->
+                                </div>
+                                <div id="giftError">
+                                    <!--#include file="content/components_javascript/functions/shop/giftError.html"-->
+                                </div>
+                                <div id="renderGiftSucces">
+                                    <!--#include file="content/components_javascript/functions/shop/renderGiftSucces.html"-->
+                                </div>
+                                <div id="btnbuyInitialize">
+                                    <!--#include file="content/components_javascript/functions/shop/btnbuyInitialize.html"-->
+                                </div>
+                                <div id="initShopPage">
+                                    <!--#include file="content/components_javascript/functions/shop/initShopPage.html"-->
+                                </div>
+                                <div id="rmFromPopupCart">
+                                    <!--#include file="content/components_javascript/functions/shop/rmFromPopupCart.html"-->
+                                </div>
+                                <div id="togglePopupCart">
+                                    <!--#include file="content/components_javascript/functions/shop/togglePopupCart.html"-->
+                                </div>
+                                <div id="renderOrderDetails">
+                                    <!--#include file="content/components_javascript/functions/shop/renderOrderDetails.html"-->
+                                </div>
+                                <div id="changeDeliveryMethod">
+                                    <!--#include file="content/components_javascript/functions/shop/changeDeliveryMethod.html"-->
+                                </div>
+                                <div id="recountCartPage">
+                                    <!--#include file="content/components_javascript/functions/shop/recountCartPage.html"-->
+                                </div>
+                                <div id="checkSyncs">
+                                    <!--#include file="content/components_javascript/functions/shop/checkSyncs.html"-->
+                                </div>
+                                <div id="countSumBask">
+                                    <!--#include file="content/components_javascript/functions/shop/countSumBask.html"-->
+                                </div>
+                                <div id="compareListCount">
+                                    <!--#include file="content/components_javascript/functions/shop/compareListCount.html"-->
+                                </div>
+                                <div id="wishListCount">
+                                    <!--#include file="content/components_javascript/functions/shop/wishListCount.html"-->
+                                </div>
+                                <div id="existsVnumber">
+                                    <!--#include file="content/components_javascript/functions/shop/existsVnumber.html"-->
+                                </div>
+                                <div id="existsVnames">
+                                    <!--#include file="content/components_javascript/functions/shop/existsVnames.html"-->
+                                </div>
+                                <div id="condProduct">
+                                    <!--#include file="content/components_javascript/functions/shop/condProduct.html"-->
+                                </div>
+                            </div>
+                            <div data-id="frontfunctions">
+                                <!--#include file="content/components_javascript/functions/frontfunctions.html"-->
+                                <div id="pluralStr">
+                                    <!--#include file="content/components_javascript/functions/front/pluralStr.html"-->
+                                </div>
+                                <div id="serializeForm">
+                                    <!--#include file="content/components_javascript/functions/front/serializeForm.html"-->
+                                </div>
+                                <div id="banerResize">
+                                    <!--#include file="content/components_javascript/functions/front/banerResize.html"-->
+                                </div>
+                                <div id="removePreloaderBaner">
+                                    <!--#include file="content/components_javascript/functions/front/removePreloaderBaner.html"-->
+                                </div>
+                                <div id="initCarouselJscrollPaneCycle">
+                                    <!--#include file="content/components_javascript/functions/front/initCarouselJscrollPaneCycle.html"-->
+                                </div>
+                                <div id="hideDrop">
+                                    <!--#include file="content/components_javascript/functions/front/hideDrop.html"-->
+                                </div>
+                                <div id="showHidePart">
+                                    <!--#include file="content/components_javascript/functions/front/showHidePart.html"-->
+                                </div>
+                                <div id="dropBaskResize">
+                                    <!--#include file="content/components_javascript/functions/front/dropBaskResize.html"-->
+                                </div>
+                                <div id="decorElemntItemProduct">
+                                    <!--#include file="content/components_javascript/functions/front/decorElemntItemProduct.html"-->
+                                </div>
+                                <div id="drawIcons">
+                                    <!--#include file="content/components_javascript/functions/front/drawIcons.html"-->
+                                </div>
+                                <div id="itemUserToolbar">
+                                    <!--#include file="content/components_javascript/functions/front/itemUserToolbar.html"-->
+                                </div>
+                                <div id="margZoomLens">
+                                    <!--#include file="content/components_javascript/functions/front/margZoomLens.html"-->
+                                </div>
+                                <div id="reinitializeScrollPane">
+                                    <!--#include file="content/components_javascript/functions/front/reinitializeScrollPane.html"-->
+                                </div>
+                                <div id="ieInput">
+                                    <!--#include file="content/components_javascript/functions/front/ieInput.html"-->
+                                </div>
+                                <div id="onComplete">
+                                    <!--#include file="content/components_javascript/functions/front/onComplete.html"-->
+                                </div>
+                                <div id="beforeShowHref">
+                                    <!--#include file="content/components_javascript/functions/front/beforeShowHref.html"-->
+                                </div>
+                                <div id="init">
+                                    <!--#include file="content/components_javascript/functions/front/init.html"-->
+                                </div>
+                            </div>
+                            <div data-id="wishlistfunctions">
+                                <!--#include file="content/components_javascript/functions/wishlistfunctions.html"-->
+                                <div id="deleteImage">
+                                    <!--#include file="content/components_javascript/functions/wishlist/deleteImage.html"-->
+                                </div>
+                                <div id="changeDataWishlist">
+                                    <!--#include file="content/components_javascript/functions/wishlist/changeDataWishlist.html"-->
+                                </div>
+                                <div id="createWishList">
+                                    <!--#include file="content/components_javascript/functions/wishlist/createWishList.html"-->
+                                </div>
+                                <div id="validateWishPopup">
+                                    <!--#include file="content/components_javascript/functions/wishlist/validateWishPopup.html"-->
+                                </div>
+                                <div id="reload">
+                                    <!--#include file="content/components_javascript/functions/wishlist/reload.html"-->
+                                </div>
+                                <div id="addToWL">
+                                    <!--#include file="content/components_javascript/functions/wishlist/addToWL.html"-->
+                                </div>
+                                <div id="removeItem">
+                                    <!--#include file="content/components_javascript/functions/wishlist/removeItem.html"-->
+                                </div>
+                                <div id="removeWL">
+                                    <!--#include file="content/components_javascript/functions/wishlist/removeWL.html"-->
+                                </div>
+                                <div id="changeBtnBuyWL">
+                                    <!--#include file="content/components_javascript/functions/wishlist/changeBtnBuyWL.html"-->
+                                </div>
+                                <div id="processWishPage">
+                                    <!--#include file="content/components_javascript/functions/wishlist/processWishPage.html"-->
+                                </div>
+                            </div>
+                            <div data-id="discountfunctions">
+                                <!--#include file="content/components_javascript/functions/discountfunctions.html"-->
+                                <div id="getDiscountBack">
+                                    <!--#include file="content/components_javascript/functions/discount/getDiscountBack.html"-->
+                                </div>
+                                <div id="loadCertificat">
+                                    <!--#include file="content/components_javascript/functions/discount/loadCertificat.html"-->
+                                </div>
+                            </div>
+                            <div data-id="filterfunctions">
+                                <!--#include file="content/components_javascript/functions/filterfunctions.html"-->
+                                <div id="filtertype">
+                                    <!--#include file="content/components_javascript/functions/filter/filtertype.html"-->
+                                </div>
+                                <div id="changeSelectFilter">
+                                    <!--#include file="content/components_javascript/functions/filter/changeSelectFilter.html"-->
+                                </div>
+                                <div id="afterAjaxInitializeFilter">
+                                    <!--#include file="content/components_javascript/functions/filter/afterAjaxInitializeFilter.html"-->
+                                </div>
+                                <div id="ajaxRecount">
+                                    <!--#include file="content/components_javascript/functions/filter/ajaxRecount.html"-->
+                                </div>
+                            </div>
+                        </div>
+                        <div data-id="events">
+                            <!--#include file="content/components_javascript/events.html"-->
+                            <div id="eventsshop">
+                                <!--#include file="content/components_javascript/events/eventsshop.html"-->
+                            </div>
+                            <div id="focus">
+                                <!--#include file="content/components_javascript/events/shop/focus.html"-->
+                            </div>
+                            <div id="methoddeliv">
+                                <!--#include file="content/components_javascript/events/shop/methoddeliv.html"-->
+                            </div>
+                            <div id="orderproducts">
+                                <!--#include file="content/components_javascript/events/shop/orderproducts.html"-->
+                            </div>
+                            <div id="toTiny">
+                                <!--#include file="content/components_javascript/events/shop/toTiny.html"-->
+                            </div>
+                            <div id="toCompare">
+                                <!--#include file="content/components_javascript/events/shop/toCompare.html"-->
+                            </div>
+                            <div id="inCompare">
+                                <!--#include file="content/components_javascript/events/shop/inCompare.html"-->
+                            </div>
+                            <div id="toWish">
+                                <!--#include file="content/components_javascript/events/shop/toWish.html"-->
+                            </div>
+                            <div id="inWish">
+                                <!--#include file="content/components_javascript/events/shop/inWish.html"-->
+                            </div>
+                            <div id="eventsfront">
+                                <!--#include file="content/components_javascript/events/eventsfront.html"-->
+                            </div>
+                            <div id="resize">
+                                <!--#include file="content/components_javascript/events/front/resize.html"-->
+                            </div>
+                            <div id="scriptDefer">
+                                <!--#include file="content/components_javascript/events/front/scriptDefer.html"-->
+                            </div>
+                            <div id="thumb">
+                                <!--#include file="content/components_javascript/events/front/thumb.html"-->
+                            </div>
+                            <div id="mousetrap">
+                                <!--#include file="content/components_javascript/events/front/mousetrap.html"-->
+                            </div>
+                            <div id="trigger">
+                                <!--#include file="content/components_javascript/events/front/trigger.html"-->
+                            </div>
+                            <div id="widget_ajax">
+                                <!--#include file="content/components_javascript/events/front/widget_ajax.html"-->
+                            </div>
+                        </div>
+                        <div data-id="modules">
+                            <!--#include file="content/components_javascript/modules.html"-->
+                            <div id="filter">
+                                <!--#include file="content/components_javascript/modules/filter.html"-->
+                            </div>
+                            <div id="rating">
+                                <!--#include file="content/components_javascript/modules/rating.html"-->
+                            </div>
+                            <div id="comments">
+                                <!--#include file="content/components_javascript/modules/comments.html"-->
+                            </div>
+                            <div id="discounts">
+                                <!--#include file="content/components_javascript/modules/discounts.html"-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- /container -->
+            <!--#include file="layouts/site/footer.html"-->
+        </div>
+    </body>
+</html>

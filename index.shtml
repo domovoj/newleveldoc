@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <!--#include file="layouts/site/head.html"-->
+    </head>
+
+    <body data-spy="scroll" data-target="#navbar-example">
+        <div class="main-body">
+            <!-- Fixed navbar -->
+            <!--#include file="layouts/site/menu.html"-->
+            <div class="container">
+                <h3>Инструменты</h3>
+                <ol>
+                    <li>Google - календар (<a href="https://www.google.com/calendar" target="_blank">google календарь</a>)</li>
+                    <li>Asana - задания (<a href="https://app.asana.com/" target="_blank">Asana</a>)</li>
+                    <li>PSD - прикрипленно в Asan-е</li>
+                    <li>Локальный сервер (рекомендуемо XAMPP <a href="http://www.apachefriends.org/ru/xampp-windows.html" target="_blank">скачать XAMPP</a>)</li>
+                    <li>Последняя сборка <a href="http://www.imagecms.net/download/shop">ImageCMS Shop</a></li>
+                </ol>
+                <h3>Быстрый запуск</h3>
+                <ol>
+                    <li>
+                        <ul>
+                            <li>
+                                <h4>Качаем сборку <a href="http://www.imagecms.net/download/shop">последяя версия на официальном сайте imageccms.net</a></h4>
+                                <ul>
+                                    <li>Установлюем сборку</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>или <a href="https://github.com/imagecms/ImageCMS">последяя версия на github.com</a></h4>
+                                <ul>
+                                    <li>Распаковуем сборку</li>
+                                    <li>Создаем папку проекта и копируем распакованый архив к примеру в папку (<code class="alert-info">D:/server/newlevel.loc</code>)</li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <ul>
+                                            <li>Клонируем проект</li>
+                                            <li>Подключаем субмодуль (<code>git submodule init</code>, <code>git submodule update</code>)</li>
+                                            <li>Переключаемся на ветку <code>development</code> в корне проекта и в модуле <code>shop</code></li>
+                                            <li>открываем файл <code>.gitignore</code> и создаем нужные папки</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p>База данных:</p>
+                                        <ol>
+                                            <li>Заходим на демоверсию магазина, входим в адмінку <a href="http://demoshop.imagecms.net/admin/login">http://demoshop.imagecms.net/admin/login</a></li>
+                                            <li>Качаем на локальный компютер <a href="http://demoshop.imagecms.net/admin/backup">http://demoshop.imagecms.net/admin/backup</a></li>
+                                            <li>Создаем базу даних в <code>phpmyadmin</code></li>
+                                            <li>Импортуем скачану базу даных в создану базу</li>
+                                            <li>Подключаем базу данных в файле <code class="alert-success">config.php</code> в масив <code>$db['default']['database']</code> записываем название созданой базы даных</li>
+                                            <li>Подключаем базу данных в файле <code class="alert-success">config.php</code> в масив <code>$config['is_installed']</code> записываем значение <code>TRUE</code></li>
+                                        </ol><br/>
+                                    </li>
+                                    <li>Запускаем или перезапускаем сервер</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Прописываем виртуальный хост в файле (<code>"Название диска":/xampp/apache/conf/extra/httpd-vhosts</code>)</p>
+                        <p>Пример виртуального хоста:</p>
+                        <pre><code>&lt;VirtualHost *:80&gt;
+    DocumentRoot "D:/server/newlevel.loc"
+    ServerName newlevel.loc 
+    ServerAlias www.newlevel.loc
+    &lt;Directory D:/server/newlevel.loc&gt;
+           AllowOverride All
+           Allow from all
+    &lt;/Directory&gt;
+&lt;/VirtualHost&gt;</code></pre>
+                        <p class="alert alert-info">название папки обизательно должно быт с разрешением <code>.loc</code> для использование тестовой лицензии</p>
+                    </li>
+                    <li>Заходим на локальный домен <a href="http://newlevel.loc">newlevel.loc</a></li>
+                </ol>
+                <h3>Быстрый старт</h3>
+                <ol>
+                    <li>Открываем шаблон <code class="alert-success">main.tpl</code></li>
+                    <li>если вам не нужно векторных иконок, удаляем из етой строки <code>scripts = ['raphael-min', 'sp_ll_jc_mw_icms_us_scripts']</code> значение масива <code>raphael-min</code>, чтобы переменная <code>scripts</code> выгледела так: <code>['sp_ll_jc_mw_icms_us_scripts']</code></li>
+                    <li>заходим в файл скриптов <code class="alert-success">sp_ll_jc_mw_icms_us_scripts.js</code> удаляем минимизированую строку после комментария <code>//_jquery.imagecms.shop.js</code>, и строку после <code>//_scirpts.js</code> (ето минимизированые копии файлов)</li>
+                    <li><code class="alert-success">_jquery.imagecms.shop.js</code> - етот файл содержить розличные <a href="#"><i>плагины front-end</i></a> розработки и <a href="#"><i>обект Shop</i></a></li>
+                    <li>после стоки <code>{include_tpl('config.js')}</code> в шаблоне <code class="alert-success">main.tpl</code> подключаем файлы скриптов которые удалили с файла <code class="alert-success">sp_ll_jc_mw_icms_us_scripts.js</code>, к примеру:<br/><br/>
+                        <pre><code>&lt;script type="text/javascript" src="{$THEME}js/_jquery.imagecms.shop.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="{$THEME}js/_scripts.js"&gt;&lt;/script&gt;</code></pre>
+                        <p class="alert alert-info">Именно в таком порядке</p>
+                    </li>
+                    <li>
+                        В шаблоне <h4 style="display: inline;">NewLevel</h4> содержыться два файла стилей:
+                        <ul>
+                            <li>стили отступов, размеров и т. д. (<code class="alert-info">newLevel/css/style.css</code>)</li>
+                            <li>стили цветовой схемы (<code class="alert-info">newLevel/css/('название цветной схемы')/colorscheme.css</code>) (<a href="admin/module/newlevel#colorscheme">настройки административной части)</a></li>
+                        </ul>
+                    </li>
+                </ol>
+                <h3>Основная структура</h3>
+                <pre>
+NewLevel/
+├── css/ (<a href="#"><i>описание</i></a>)
+├── js/ (<a href="components_js.shtml#files"><i>описание</i></a>)
+├── images/ (<a href="#"><i>описание</i></a>)
+├── category_menu/ (<a href="#"><i>описание</i></a>)
+├── language/ (<a href="#"><i>описание</i></a>)
+├── new_level/ (<a href="#"><i>описание</i></a>)
+├── paymentSystem/ (<a href="#"><i>описание</i></a>)
+├── shop/ (<a href="#"><i>описание</i></a>)
+│   ├── helpers
+│   │   └── helper.php (<a href="#"><i>описание</i></a>)
+│   ├── auth_data.tpl (<a href="#"><i>описание</i></a>)
+│   ├── brand.tpl (<a href="#"><i>описание</i></a>)
+│   ├── brands_images.tpl (<a href="#"><i>описание</i></a>)
+│   ├── brands_list.tpl (<a href="#"><i>описание</i></a>)
+│   ├── callback.tpl (<a href="#"><i>описание</i></a>)
+│   ├── cart.tpl (<a href="#"><i>описание</i></a>)
+│   ├── cart_data.tpl (<a href="#"><i>описание</i></a>)
+│   ├── catalogue_header.tpl (<a href="#"><i>описание</i></a>)
+│   ├── category.tpl (<a href="#"><i>описание</i></a>)
+│   ├── categorysubfirst.tpl (<a href="#"><i>описание</i></a>)
+│   ├── categorysubsecond.tpl (<a href="#"><i>описание</i></a>)
+│   ├── compare.tpl (<a href="#"><i>описание</i></a>)
+│   ├── compare_data.tpl (<a href="#"><i>описание</i></a>)
+│   ├── js_templates.tpl (<a href="#"><i>описание</i></a>)
+│   ├── order_view.tpl (<a href="#"><i>описание</i></a>)
+│   ├── pattern_custom_field.php (<a href="#"><i>описание</i></a>)
+│   ├── product.tpl (<a href="#"><i>описание</i></a>)
+│   ├── profile.tpl (<a href="#"><i>описание</i></a>)
+│   ├── profile_change_pass.tpl (<a href="#"><i>описание</i></a>)
+│   ├── profile_data.tpl (<a href="#"><i>описание</i></a>)
+│   ├── profile_history.tpl (<a href="#"><i>описание</i></a>)
+│   ├── report_appearance.tpl (<a href="#"><i>описание</i></a>)
+│   ├── search.tpl (<a href="#"><i>описание</i></a>)
+│   ├── start_page.tpl (<a href="#"><i>описание</i></a>)
+│   ├── subcategory.tpl (<a href="#"><i>описание</i></a>)
+│   └── wish_list_data.tpl (<a href="#"><i>описание</i></a>)
+├── widgets/ (<a href="#"><i>описание</i></a>)
+├── wishlist/ (<a href="#"><i>описание</i></a>)
+├── category (<a href="#"><i>описание</i></a>)
+├── config.js.tpl (<a href="#"><i>описание</i></a>)
+├── footer.tpl (<a href="#"><i>описание</i></a>)
+├── forgot_password.tpl (<a href="#"><i>описание</i></a>)
+├── header.tpl (<a href="#"><i>описание</i></a>)
+├── login.tpl (<a href="#"><i>описание</i></a>)
+├── login_popup.tpl (<a href="#"><i>описание</i></a>)
+├── main.tpl (<a href="#"><i>описание</i></a>)
+├── offline.tpl (<a href="#"><i>описание</i></a>)
+├── page_full.tpl (<a href="#"><i>описание</i></a>)
+├── register.tpl (<a href="#"><i>описание</i></a>)
+└── user_toolbar.tpl (<a href="#"><i>описание</i></a>)</pre>
+            </div> <!-- /container -->
+            <!--#include file="layouts/site/footer.html"-->
+        </div>
+    </body>
+</html>

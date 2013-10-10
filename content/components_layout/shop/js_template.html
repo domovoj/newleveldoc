@@ -1,0 +1,32 @@
+<div id="cartpopup">
+
+</div>
+<div id="cartorder">
+
+</div>
+<div id="autocomplete">
+    <h3>Форма поиска</h3>
+    <pre class="unstyled"><code>&lt;form name=&quot;search&quot; method=&quot;get&quot; action=&quot;{shop_url('search')}&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;btn-search&quot;&gt; <span data-nS="notes.css.btn"></span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button type=&quot;submit&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;icon_search&quot;&gt;&lt;/span&gt; <span data-nS="notes.css.icon"></span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;text-el&quot;&gt;{lang('Найти','newLevel')}&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;frame-search-input&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;text&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;text&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;autocomplete=&quot;off&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;{if strpos($CI-&gt;uri-&gt;uri_string, 'search') !== false}{htmlspecialchars($_GET['text'])}{/if}&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;placeholder=&quot;{lang('Поиск по сайту', 'newLevel')}&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;class=&quot;input-search&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;inputString&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div id=&quot;suggestions&quot; class=&quot;drop drop-search&quot;&gt;&lt;/div&gt; <span data-nS="notes.html.drop"></span>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&lt;/form&gt;</code></pre>
+</div>
+<div id="report_appearance_js">
+
+</div>

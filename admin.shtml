@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <!--#include file="layouts/site/head.html"-->
+    </head>
+
+    <body data-spy="scroll" data-target="#navbar-example">
+        <div class="main-body">
+            <!-- Fixed navbar -->
+            <!--#include file="layouts/site/menu.html"-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3" id="navbar-example">
+                        <nav>
+                            <!--#include file="layouts/site/menu_admin.html"-->
+                        </nav>
+                    </div>
+                    <div class="col-md-9 scrollspy-example">
+                        <div data-id="modules">
+                            <!--#include file="content/admin/modules.html"-->
+                            <div id="newLevel">
+                                <!--#include file="content/admin/modules/newLevel.html"-->
+                            </div>
+                            <div id="discounts">
+                                <!--#include file="content/admin/modules/discounts.html"-->
+                            </div>
+                            <div id="banners">
+                                <!--#include file="content/admin/modules/banners.html"-->
+                            </div>
+                            <div id="comments">
+                                <!--#include file="content/admin/modules/comments.html"-->
+                            </div>
+                            <div id="socweb">
+                                <!--#include file="content/admin/modules/socweb.html"-->
+                            </div>
+                        </div>
+                        <div data-id="widgets">
+                            <!--#include file="content/admin/widgets.html"-->
+                            <div id="htmlwidget">
+                                <!--#include file="content/admin/widgets/htmlwidget.html"-->
+                            </div>
+                            <div id="modulewidget">
+                                <!--#include file="content/admin/widgets/modulewidget.html"-->
+                            </div>
+                        </div>
+                        <div data-id="addfields">
+                            <!--#include file="content/admin/addfields.html"-->
+                            <div id="articles">
+                                <!--#include file="content/admin/additional_fields/articles.html"-->
+                            </div>
+                            <div id="forms">
+                                <!--#include file="content/admin/additional_fields/forms.html"-->
+                            </div>
+                        </div>
+                        <div data-id="settings">
+                            <!--#include file="content/admin/settings.html"-->
+                            <div id="site">
+                                <!--#include file="content/admin/settings/shop.html"-->
+                            </div>
+                            <div id="shop">
+                                <!--#include file="content/admin/settings/site.html"-->
+                            </div>
+                        </div>
+                        <div id="menus">
+                            <!--#include file="content/admin/menus.html"-->
+                        </div>
+                        <div id="cache">
+                            <!--#include file="content/admin/cache.html"-->
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- /container -->
+            <!--#include file="layouts/site/footer.html"-->
+        </div>
+    </body>
+</html>

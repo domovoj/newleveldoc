@@ -1,0 +1,142 @@
+<h3>Главное меню категорий</h3>
+<div class="panel panel-primary panel-code" id="mainmenuhorizontal">
+    <div class="panel-heading">
+        <div class="panel-title">Пример главного шаблона с горизонтальным меню</div>
+    </div>
+    <div class="panel-body">
+        <img src="/uploads/hlayout.jpg"/>
+        <pre><code>&lt;html&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hellip;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;main-body&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;fon-header&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;header&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hellip;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/header&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="frame-menu-main horizontal-menu"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{\Category\RenderMenu::create()-&gt;setConfig(array('cache'=&gt;TRUE))-&gt;load('category_menu')}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;content&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hellip;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;h-footer&quot;&gt;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;footer&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hellip;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/footer&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<div class="panel panel-primary panel-code" id="mainmenuvertical">
+    <div class="panel-heading">
+        <div class="panel-title">Пример главного шаблона с вертикальным меню</div>
+    </div>
+    <div class="panel-body">
+        <img src="/uploads/vlayout.jpg"/>
+        <pre><code>&lt;html&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hellip;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;main-body&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;fon-header&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;header&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hellip;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/header&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;vertical-layout container&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="frame-menu-main vertical-menu"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{\Category\RenderMenu::create()-&gt;setConfig(array('cache'=&gt;TRUE))-&gt;load('category_menu')}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;content&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hellip;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;h-footer&quot;&gt;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;footer&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hellip;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/footer&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+
+<h3>Главное меню категорий 2-й уровень</h3>
+<p>Главное меню категоий может быть двох видов:</p>
+<div class="panel panel-primary panel-code" id="mainmenurow">
+    <div class="panel-heading">
+        <div class="panel-title">Пример меню с по строчным выводом категорий 2-го уровня</div>
+    </div>
+    <div class="panel-body">
+        <img src="/uploads/menus/rowmenu.jpg"/>
+        <h5>HTML:</h5>
+        <pre><code>&lt;div class=&quot;menu-main not-js menu-row-category&quot;&gt;&lt;/div&gt;</code></pre>
+        <h5>JS:</h5>
+        <pre><code>var optionsMenu = {
+    //countColumn: 5
+    sub2Frame: '.frame-l2', //селектор фрейма 3-го уровня меню категорий
+    dropWidth: 475 //не обезательнный параметр который указывает на шырину фрейма 2-го уровня категорий
+}</code></pre>
+    </div>
+</div>
+<div class="panel panel-primary panel-code" id="mainmenucol">
+    <div class="panel-heading">
+        <div class="panel-title">Пример меню с по столбиковым выводом категорий 2-го уровня</div>
+    </div>
+    <div class="panel-body">
+        <img src="/uploads/menus/colmenu.jpg"/>
+        <h5>HTML:</h5>
+        <pre><code>&lt;div class=&quot;menu-main not-js menu-col-category&quot;&gt;&lt;/div&gt;</code></pre>
+        <h5>JS:</h5>
+        <pre><code>var optionsMenu = {
+    countColumn: 5 //необезательный параметр который указывает на количество категорий 2-го уровня
+    //sub2Frame: '.frame-l2',
+    //dropWidth: 475
+}</code></pre>
+    </div>
+</div>
+
+<h3>Главное меню категорий 3-й уровень колонками</h3>
+<p>Главное меню категорий 3-его уровня, можна выводить колонками</p>
+<div class="panel panel-primary panel-code" id="mainmenurowcol3">
+    <div class="panel-heading">
+        <div class="panel-title">Пример меню с по столбиковым выводом категорий 3-го уровня (2-й уровень строки)</div>
+    </div>
+    <div class="panel-body">
+        <img src="/uploads/menus/rowcol3.jpg"/>
+    </div>
+</div>
+<div class="panel panel-primary panel-code" id="mainmenurowright">
+    <div class="panel-heading">
+        <div class="panel-title">Пример меню с по строчным выводом категорий 2-го уровня (выпадание вправо)</div>
+    </div>
+    <div class="panel-body">
+        <img src="/uploads/menus/rowrightcol3.jpg"/>
+    </div>
+</div>
+<div class="panel panel-primary panel-code" id="mainmenurowdown">
+    <div class="panel-heading">
+        <div class="panel-title">Пример меню с по строчным выводом категорий 2-го уровня (выпадание вниз)</div>
+    </div>
+    <div class="panel-body">
+        <img src="/uploads/menus/rowdowncol3.jpg"/>
+        <h5>CSS:</h5>
+        <pre><code>.menu-main .frame-l2.is-side{position: static;}</code></pre>
+    </div>
+</div>
+<div class="panel panel-primary panel-code" id="mainmenucolcol3">
+    <div class="panel-heading">
+        <div class="panel-title">Пример меню с по столбиковым выводом категорий 3-го уровня (2-й уровень столбики)</div>
+    </div>
+    <div class="panel-body">
+        <img src="/uploads/menus/colcol3.jpg"/>
+    </div>
+</div>
+<p class="alert alert-info">Такие типы меню можно применить и для <a href="#mainmenuvertical" class="alert-link">вертикального типа меню</a></p>

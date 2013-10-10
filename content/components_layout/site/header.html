@@ -1,0 +1,38 @@
+<h3>Хедер</h3>
+<p>Визуально область этого блока, выглядит так:<br/>
+    <img src="/uploads/prototype/header.png"/>
+</p>
+<ol>
+    <li><h5><a href="#topmenu"><i>Верхнее меню</i></a> <code>{load_menu('top_menu')}</code></h5></li>
+    <li><h5><a href="#auth_data"><i>Сылки профиля</i></a> <code>{include_shop_tpl('auth_data')}</code></h5></li>
+    <li>
+        <h5>Заказ дзвонка</h5>
+        <pre class="unstyled"><code>&lt;ul class=&quot;tabs&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class=&quot;btn-order-call&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href=&quot;#ordercall&quot; data-drop=&quot;#ordercall&quot; data-source=&quot;{site_url('shop/callback')}&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;icon_order_call&quot;&gt;&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;text-el d_l&quot;&gt;{lang('Заказать звонок','newLevel')}&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        <ul>
+            <li>
+                <pre class="unstyled"><code>&lt;ul class=&quot;tabs&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class=&quot;btn-order-call&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href=&quot;#ordercall&quot; data-drop=&quot;#ordercall&quot; data-source=&quot;{site_url('shop/callback')}&quot;&gt;</code></pre>
+                <p>Такая структура нужна для приминения плагина <a href="/components_js.shtml#tabs"><i>tabs</i></a> <span data-nS="notes.css.tabs"></span></p>
+            </li>
+            <li>
+                <pre class="unstyled"><code>data-drop="#ordercall" data-source="{site_url('shop/callback')}"</code></pre>
+                <p>Такие атрибуты нужны для применения плагина <a href="/components_js.shtml#drop"><i>drop</i></a> <span data-nS="notes.html.drop"></span>
+            </li>
+        </ul>
+        <p class="alert alert-info">Открываеться <a href="#callback" class="alert-link"><i>всплывающое окно колбека</i></a> при возникновении события <code>"click"</code></p>
+    </li>
+    <li>
+        <h5><a href="#autocomplete"><i>Форма поиска</i></a></h5>
+    </li>
+    <li>
+        <h5><a href="#cart_data"><i>Кнопка корзины</i></a>
+    </li>
+</ol>
