@@ -25,4 +25,42 @@
 </code></pre>
 <p>Первый его родитель который имеет относительное позиционирование это элемент с класом <code>menu-main</code>, это нужно чтоб легко позиционировать выпадающий блок и не задавая ширину, также он имеет ограничение в ширине <code>max-width: 100%;</code></p>
 <p>К этому блоку могут применятся класы в диапазоне <code>[x1...xn]</code> етот клас опердиляет количество подкатегорий выстроенных колонками посредством выбора в админке, и применения плагином <a href="/components_js.shtml#menuImageCms"><i>menuImageCms</i></a></p>
+<div id="xmenu">
+    <pre class="unstyled"><code>.menu-col-category .frame-drop-menu > ul{padding: 5px 15px 0;}
+.menu-col-category .frame-drop-menu > ul > li{width: 176px;padding-right: 8px;padding-bottom: 10px;}
+.is-side > ul > li{width: 100%;}
+
+.is-side.x1{width: 200px !important;}
+.is-side.x2{width: 400px !important;}
+.is-side.x3{width: 600px !important;}
+.is-side.x4{width: 800px !important;}
+.is-side.x5{width: 1000px !important;}
+.is-side.x6{width: 1200px !important;}
+.is-side.x7{width: 1400px !important;}
+.is-side.x8{width: 1600px !important;}
+.menu-col-category .frame-drop-menu .x9{width: 1652px;}
+.frame-drop-menu.x9{width: 1694px;}
+.x9 > ul > li, .x9 .frame-l2 > ul > li[data-column]{width: 11%;}
+.menu-col-category .frame-drop-menu .x8{width: 1468px;}
+.frame-drop-menu.x8{width: 1510px;}
+.x8 > ul > li, .x8 .frame-l2 > ul > li[data-column]{width: 12.5%;}
+.menu-col-category .frame-drop-menu .x7{width: 1284px;}
+.frame-drop-menu.x7{width: 1326px;}
+.x7 > ul > li, .x7 .frame-l2 > ul > li[data-column]{width: 14%;}
+.menu-col-category .frame-drop-menu .x6{width: 1100px;}
+.frame-drop-menu.x6{width: 1142px;}
+.x6 > ul > li, .x6 .frame-l2 > ul > li[data-column]{width: 16%;}
+.menu-col-category .frame-drop-menu .x5{width: 916px;}
+.frame-drop-menu.x5{width: 958px;}
+.x5 > ul > li, .x5 .frame-l2 > ul > li[data-column]{width: 20%;}
+.menu-col-category .frame-drop-menu .x4{width: 732px;}
+.frame-drop-menu.x4{width: 774px;}
+.x4 > ul > li, .x4 .frame-l2 > ul > li[data-column]{width: 25%;}
+.menu-col-category .frame-drop-menu .x3{width: 548px;}
+.frame-drop-menu.x3{width: 590px;}
+.x3 > ul > li, .x3 .frame-l2 > ul > li[data-column]{width: 33%;}
+.menu-col-category .frame-drop-menu .x2{width: 364px;}
+.frame-drop-menu.x2{width: 406px;}
+.x2 > ul > li, .x2 .frame-l2 > ul > li[data-column]{width: 50%;}</code></pre>
+</div>
 <p>Другое отображение выпадаещого фрейма 2-го уровня категорий можно посмотреть <a href="/examples.shtml#mainmenurow"><i>здесь</i></a></p>

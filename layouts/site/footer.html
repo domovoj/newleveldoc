@@ -166,8 +166,14 @@
                 location.hash = $(this).attr('href');
             e.preventDefault();
         });
-        if (location.hash != '')
-            $("a[href='"+location.hash+"']").click();
+        if (location.hash != ''){
+            if ($("a[href='"+location.hash+"']").length > 0)
+                $("a[href='"+location.hash+"']").click();
+            else{
+                $('body, html').animate({'scrollTop': $(location.hash).offset().top-60});
+            }
+        }
+            
         hljs.tabReplace = '    '; //4 spaces
         hljs.initHighlighting();
     
