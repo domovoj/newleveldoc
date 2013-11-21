@@ -32,7 +32,7 @@
                                 <!--#include file="content/components_layout/shop/catalogue_header.html"-->
                             </div>
                             <div id="compare_data">
-                                <!--#include file="content/components_layout/shop/compare_data.html"-->
+                                <!--#include file="content/components_layout/shop/compare_data.html"-->categorymenu
                             </div>
                             <div id="js_template">
                                 <!--#include file="content/components_layout/shop/js_template.html"-->
@@ -90,9 +90,6 @@
                             <!--#include file="content/components_layout/menus.html"-->
                             <div id="topmenu">
                                 <!--#include file="content/components_layout/menu/topmenu.html"-->
-                            </div>
-                            <div id="catogorymenu">
-                                <!--#include file="content/components_layout/menu/catogorymenu.html"-->
                             </div>
                             <div id="subcategorymenu">
                                 <!--#include file="content/components_layout/menu/subcategorymenu.html"-->

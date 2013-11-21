@@ -9,6 +9,9 @@
             <!-- Fixed navbar -->
             <!--#include file="layouts/site/menu.html"-->
             <div class="container">
+                <!--#set var="a" value="2"--> 
+                <!--#echo var="a"--> 
+                
                 <h3>Инструменты</h3>
                 <ol>
                     <li>Google - календар (<a href="https://www.google.com/calendar" target="_blank">google календарь</a>)</li>
@@ -61,7 +64,7 @@
                     <li>
                         <p>Прописываем виртуальный хост в файле (<code>"Название диска":/xampp/apache/conf/extra/httpd-vhosts</code>)</p>
                         <p>Пример виртуального хоста:</p>
-                        <pre><code>&lt;VirtualHost *:80&gt;
+                        <pre class="unstyled"><code>&lt;VirtualHost *:80&gt;
     DocumentRoot "D:/server/newlevel.loc"
     ServerName newlevel.loc 
     ServerAlias www.newlevel.loc
@@ -81,7 +84,7 @@
                     <li>заходим в файл скриптов <code class="alert-success">sp_ll_jc_mw_icms_us_scripts.js</code> удаляем минимизированую строку после комментария <code>//_jquery.imagecms.shop.js</code>, и строку после <code>//_scirpts.js</code> (ето минимизированые копии файлов)</li>
                     <li><code class="alert-success">_jquery.imagecms.shop.js</code> - етот файл содержить розличные <a href="#"><i>плагины front-end</i></a> розработки и <a href="#"><i>обект Shop</i></a></li>
                     <li>после стоки <code>{include_tpl('config.js')}</code> в шаблоне <code class="alert-success">main.tpl</code> подключаем файлы скриптов которые удалили с файла <code class="alert-success">sp_ll_jc_mw_icms_us_scripts.js</code>, к примеру:<br/><br/>
-                        <pre><code>&lt;script type="text/javascript" src="{$THEME}js/_jquery.imagecms.shop.js"&gt;&lt;/script&gt;
+                        <pre class="unstyled"><code>&lt;script type="text/javascript" src="{$THEME}js/_jquery.imagecms.shop.js"&gt;&lt;/script&gt;
 &lt;script type="text/javascript" src="{$THEME}js/_scripts.js"&gt;&lt;/script&gt;</code></pre>
                         <p class="alert alert-info">Именно в таком порядке</p>
                     </li>
@@ -94,7 +97,7 @@
                     </li>
                 </ol>
                 <h3>Основная структура</h3>
-                <pre>
+                <pre class="unstyled">
 NewLevel/
 ├── css/ (<a href="#"><i>описание</i></a>)
 ├── js/ (<a href="components_js.shtml#files"><i>описание</i></a>)

@@ -3,7 +3,6 @@
     <head>
         <!--#include file="layouts/site/head.html"-->
     </head>
-
     <body data-spy="scroll" data-target="#navbar-example" data-offset="70">
         <div class="main-body">
             <!-- Fixed navbar -->

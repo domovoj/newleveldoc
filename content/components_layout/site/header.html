@@ -1,5 +1,11 @@
 <h3>Хедер</h3>
-<p>Визуально область этого блока, выглядит так:<br/>
+<h4>Место нахождения</h4>
+<code class="alert-success">header.tpl</code> находится в папке <code>"Название шаблона"/shop/header.tpl</code>
+<h4>Компоненты</h4>
+<span class="h5">Компонент</span> <b>HTML</b>:
+<p>Визуально область этого блока, выглядит так:
+    <br/>
+    <br/>
     <img src="/uploads/prototype/header.png"/>
 </p>
 <ol>
@@ -30,7 +36,32 @@
         <p class="alert alert-info">Открываеться <a href="#callback" class="alert-link"><i>всплывающое окно колбека</i></a> при возникновении события <code>"click"</code></p>
     </li>
     <li>
-        <h5><a href="#autocomplete"><i>Форма поиска</i></a></h5>
+        <h3>Форма поиска</h3>
+        <pre class="unstyled"><code>&lt;form name=&quot;search&quot; method=&quot;get&quot; action=&quot;{shop_url('search')}&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;btn-search&quot;&gt; <span data-nS="notes.css.btn"></span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button type=&quot;submit&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;icon_search&quot;&gt;&lt;/span&gt; <span data-nS="notes.css.icon"></span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;text-el&quot;&gt;{lang('Найти','newLevel')}&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;frame-search-input&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;text&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;text&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;autocomplete=&quot;off&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;{if strpos($CI-&gt;uri-&gt;uri_string, 'search') !== false}{htmlspecialchars($_GET['text'])}{/if}&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;placeholder=&quot;{lang('Поиск по сайту', 'newLevel')}&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;class=&quot;input-search&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;inputString&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div id=&quot;suggestions&quot; class=&quot;drop drop-search&quot;&gt;&lt;/div&gt; <span data-nS="notes.html.drop"></span>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&lt;/form&gt;</code></pre>
+        <ul>
+            <li>Атрибут <code>id="inputString"</code> используется для приминение плагина <code>autocomplete</code> подробно о плагине <a href="/components_js.shtml#autocomplete"><i>autocomplete</i></a></li>
+            <li>Атрибут <code>id="suggestions"</code> используется для вставки содержимого результата исопользование плагина <code>autocomplete</code> подробно о плагине <a href="/components_js.shtml#autocomplete"><i>autocomplete</i></a></li>
+            <li>В качестве структуры результатов автодополнения выступает часть файла <a href="#autocomplete"><i>js_templates</i></a> (скрипт с атрибутом <code>id="searchResultsTemplate"</code>)</li>
+        </ul>
     </li>
     <li>
         <h5><a href="#cart_data"><i>Кнопка корзины</i></a>

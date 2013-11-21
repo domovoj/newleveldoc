@@ -1,13 +1,20 @@
 <h3>Футер</h3>
-<p>Визуально область этого блока, выглядит так:<br/>
+<h4>Место нахождения</h4>
+<code class="alert-success">footer.tpl</code> находится в папке <code>"Название шаблона"/footer.tpl</code>
+<h4>Компоненты</h4>
+<span class="h5">Компонент</span> <b>HTML</b>:
+<p>Визуально область этого блока, выглядит так:
+    <br/>
+    <br/>
     <img src="/uploads/prototype/footer.png"/>
+
 </p>
 <ol>
     <li><h5><a href="#topmenu"><i>Верхнее меню</i></a> <code>{load_menu('top_menu')}</code></h5></li>
     <li><h5><a href="#footermenu"><i>Footer меню</i></a> <code>{\Category\RenderMenu::create()->setConfig(array('cache'=>FALSE))->load('footer_category_menu')}</code></h5></li>
     <li><h5>Меню пользователя</h5>
         <pre class="unstyled"><code>&lt;ul&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;{if $is_logged_in}
+&nbsp;&nbsp;&nbsp;&nbsp;{if $is_logged_in} <span data-nS="notes.php.vars.isLogin"></span>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button type=&quot;button&quot; onclick=&quot;location = '{site_url('auth/logout')}'&quot; title=&quot;{lang('Выход','newLevel')}&quot;&gt;{lang('Выход','newLevel')}&lt;/button&gt;
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;
